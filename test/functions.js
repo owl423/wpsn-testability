@@ -3,6 +3,7 @@ const assert = require('assert')
 const {
   addAsync,
   addSync,
+  productSync,
   throwErrorIfNegative
 } = require('../src/functions')
 
@@ -49,6 +50,12 @@ describe('functions', function () {
       assert.throws(() => {
         throwErrorIfNegative(-1)
       })
+    })
+  })
+  describe('productSync', function (){
+    it('기본 기능', function(){
+      const result = productSync(2, 3)
+      assert.equal(result, 6)
     })
   })
 })

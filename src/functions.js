@@ -9,7 +9,6 @@ function addAsync(x, y) {
     }, 100)
   })
 }
-
 function throwErrorIfNegative(x) {
   if (x < 0) {
     throw new Error('양수만 허용됩니다.')
@@ -17,8 +16,12 @@ function throwErrorIfNegative(x) {
   return x
 }
 
+function productSync(x, y){
+  return x * y
+}
 module.exports = {
   addSync,
   addAsync,
+  productSync,
   throwErrorIfNegative
 }
